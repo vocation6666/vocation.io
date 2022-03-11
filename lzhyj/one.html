@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+
+
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<link rel="stylesheet" href="./one_files/bootstrap.min.css">
+<link rel="stylesheet" href="./one_files/jquery.dataTables.min.css">
+<link rel="stylesheet" href="./one_files/iview.css">
+<link rel="stylesheet" href="./one_files/tg-turing.min.css">
+<link rel="stylesheet" href="./one_files/iconfont.css">
+<link rel="stylesheet" href="./one_files/iconfont(1).css">
+<link rel="stylesheet" href="./one_files/access.css">
+<link rel="stylesheet" href="./one_files/blue.css" id="themeLink">
+<link rel="stylesheet" href="./one_files/style.css">
+<title>学生工作平台</title>
+</head>
+
+<body>
+    <main class="tg-bg-grey-6">
+        <header class="p_header_bg" style="background-image: url(./one_files/header.jpg);">
+        
+
+
+<div class="p_container tg-clear-child p_header_pt">
+ <img class="p_logo tg-left" src="./one_files/logo.do" alt="" data-url="">
+ <div class="tg-right p_header_username" title="第一个页面header里的学号">202001240226</div>
+ <div class="p_icons tg-right tg-clear-child p_header_img">
+  <div class="p_icon tg-right " p-icon-category="user">
+      <!-- 第一个页面header中的修改头像 -->
+   <img class="user-img" src="./lzhyj.jpg"  alt="" toggle-target="#user-menu">
+   
+   
+   <ul class="p-dropdown-menu" id="user-menu" style="display: none;">
+       
+           <li class="" data-url="" data-target="_self"><a href="javascript:;"> <img class="p_user_logo" src="./one_files/person.png">个人中心</a></li>
+       
+       
+       
+           <li data-url="#" data-target="_self"><a href="javascript:;"> <img class="p_user_logo" src="./one_files/logout.png">退出</a></li>
+       
+   </ul>
+   
+  </div>
+ </div>
+  <div class="dividing-line"></div>
+ 
+ <div class="tg-right btn-group-xs p_theme">
+     <i flag="ios-shirt" class="ivu-icon ivu-icon-ios-shirt p_change_theme" toggle-target="#changeTheme"></i>
+     <div class="p_theme_container e_todo_item_themes tg-clear" id="changeTheme" style="display: none;">
+         <i class="tg-br-t-primary-1 tg-br-l-primary-1"></i>
+         <div class="theme-title">切换主题</div>
+         <div class="theme-item" data-theme="blue">
+             <img src="./one_files/blue_theme.png" alt="">
+             <span>静谧</span>
+             
+             <div class="theme-item-isuse">
+               使用中
+             </div>
+             
+         </div>
+         <div class="theme-item" data-theme="green">
+             <img src="./one_files/green_theme.png" alt="">
+             <span>生机</span>
+             
+         </div>
+         <div class="theme-item" data-theme="purple">
+             <img src="./one_files/purple_theme.png" alt="">
+             <span>神秘</span>
+             
+         </div>
+         <div class="theme-item" data-theme="red">
+             <img src="./one_files/red_theme.png" alt="">
+             <span>热情</span>
+             
+         </div>
+     </div>
+ </div>
+ 
+ 
+  <div class="dividing-line"></div>
+ <div class="tg-right btn-group-xs p_language">
+   <button type="button" class="btn btn-primary" toggle-target="#lang-menu">
+       中文
+       <span class="caret"></span>
+   </button>
+   
+   <ul class="p-dropdown-menu" id="lang-menu" style="display: none;">
+    
+    <li class="p-menuItem-active" lang="zh"><a href="javascript:;">中文</a></li>
+    
+    <li lang="en"><a href="javascript:;">ENG</a></li>
+    
+   </ul>
+   
+ </div>
+ 
+ 
+ 
+</div>
+        
+
+
+
+<div class="p_container tg-clear-child p_container_content">
+    <div class="p_head_left">
+        <div class="p_head_left_title">欢迎来到应用管理平台</div>
+        <div style="display: inline-block;">
+        <input class="p_head_left_search" id="search-input" placeholder="请输入您要办理的事项" type="search">
+        <button class="p_head_left_button" id="search-btn">搜索</button>
+        </div>
+    </div>
+    <div class="p_head_right tg-clear-child" data-mod="widgets/common_service">
+        
+
+
+
+<div class="p_head_right_content">
+    <div class="">常用服务</div>
+    
+    
+      
+        <ul>
+          
+          
+          <li title="学生请假" data-url="/xsfw/sys/emaphome/appShow.do?id=4e52">
+          <div class="p_head_service_item">学生请假</div>
+          </li>
+          
+          
+          <li title="第二课堂" data-url="/xsfw/sys/emaphome/appShow.do?id=dd86fda1fda">
+          <div class="p_head_service_item">第二课堂</div>
+          </li>
+          
+          
+          <li title="基本信息" data-url="/xsfw/sys/emaphome/appShow.do?id=b90a888741367046a61">
+          <div class="p_head_service_item">基本信息</div>
+          </li>
+          
+          
+          <li title="节假日离返校" data-url="/xsfw/sys/emaphome/appShow.do?id=37ba2f78b2edb743c5">
+          <div class="p_head_service_item">节假日离返校</div>
+          </li>
+          
+          
+          <li title="学生活动" data-url="/xsfw/sys/emaphome/appShow.do?id=eaa5a59f7862153226">
+          <div class="p_head_service_item">学生活动</div>
+          </li>
+          
+          
+          <li title="辅导员考核" data-url="/xsfw/sys/emaphome/appShow.do?id=c14f9017ee1b9">
+          <div class="p_head_service_item">辅导员考核</div>
+          </li>
+          
+        </ul>
+      
+      
+    
+</div>
+    </div>
+</div>
+        </header>
+        
+
+
+
+<article class="p_layout_left_right">
+    <section class="s_left_container">
+        <div class="p-row" p-row-type="normal">
+            <div class="p-col" p-col-size="A" p-col-type="card" data-mod="widgets/main_tab">
+                
+
+
+
+<div class="p-card p-card-nopadh" p-role="tab">
+   <div class="p_header p_line_header">
+       
+       <div class="p_items">
+           
+           <div class="p_item">
+               <span class="p_title" title="学生数据">学生数据</span>
+               <hr class="tg-bg-primary-1">
+           </div>
+           
+           <div class="p_item  p-active">
+               <span class="p_title" title="学生事务">学生事务</span>
+               <hr class="tg-bg-primary-1">
+           </div>
+           
+           <div class="p_item">
+               <span class="p_title" title="团委服务">团委服务</span>
+               <hr class="tg-bg-primary-1">
+           </div>
+           
+           <div class="p_item ">
+               <span class="p_title" title="资助服务">资助服务</span>
+               <hr class="tg-bg-primary-1">
+           </div>
+           
+           <div class="p_item ">
+               <span class="p_title" title="奖惩服务">奖惩服务</span>
+               <hr class="tg-bg-primary-1">
+           </div>
+           
+           <div class="p_item ">
+               <span class="p_title" title="心理服务">心理服务</span>
+               <hr class="tg-bg-primary-1">
+           </div>
+           
+           <div class="p_item ">
+               <span class="p_title" title="思政教育">思政教育</span>
+               <hr class="tg-bg-primary-1">
+           </div>
+           
+           <div class="p_item ">
+               <span class="p_title" title="宿舍服务">宿舍服务</span>
+               <hr class="tg-bg-primary-1">
+           </div>
+           
+           <div class="p_item ">
+               <span class="p_title" title="离校服务">离校服务</span>
+               <hr class="tg-bg-primary-1">
+           </div>
+           
+       </div>
+       
+       <i class="iconfont icon-keyboardarrowleft tab-more tab-more-left disabled"></i>
+       <i class="iconfont icon-keyboardarrowright tab-more tab-more-right"></i>
+       
+   </div>
+   <div class="p_body p_haspadding">
+       
+       <div class="p_item">
+           <div class="p_cards tg-clear-child">
+               
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon.do" alt="">
+                    <div class="p_card_name">基本信息</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=b90a8887046a61">进入应用</div>
+                    </div>
+                 </div>
+                 
+               
+            </div>
+        </div>
+        
+       <div class="p_item  p-active">
+           <div class="p_cards tg-clear-child">
+               
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(1).do" alt="">
+                    <div class="p_card_name">节假日离返校</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=37ba2f74e31db743c5">进入应用</div>
+                    </div>
+                 </div>
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(2).do" alt="">
+                    <div class="p_card_name">学生请假</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter"><a href="./second.html">进入应用</a></div>
+                    </div>
+                 </div>
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(3).do" alt="">
+                    <div class="p_card_name">学生证</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=c1a89f05420189e5066">进入应用</div>
+                    </div>
+                 </div>
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(4).do" alt="">
+                    <div class="p_card_name">学生证明打印</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=a5735dbe2610f261">进入应用</div>
+                    </div>
+                 </div>
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(5).do" alt="">
+                    <div class="p_card_name">保险理赔</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=cdd662e7de6346e47">进入应用</div>
+                    </div>
+                 </div>
+                 
+               
+            </div>
+        </div>
+        
+       <div class="p_item">
+           <div class="p_cards tg-clear-child">
+               
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(6).do" alt="">
+                    <div class="p_card_name">第二课堂</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=dd86fdaa3b43c61fda">进入应用</div>
+                    </div>
+                 </div>
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(7).do" alt="">
+                    <div class="p_card_name">学生活动</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=ec41cec24cdf7862153226">进入应用</div>
+                    </div>
+                 </div>
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(8).do" alt="">
+                    <div class="p_card_name">志愿服务</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=a4b909f3af34e89f17c">进入应用</div>
+                    </div>
+                 </div>
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(9).do" alt="">
+                    <div class="p_card_name">社会实践</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=a594b891e00f630648">进入应用</div>
+                    </div>
+                 </div>
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(10).do" alt="">
+                    <div class="p_card_name">学生社团</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=2346065332b29fe0f">进入应用</div>
+                    </div>
+                 </div>
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(11).do" alt="">
+                    <div class="p_card_name">创新创业管理</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=b91d523cdaf504a9">进入应用</div>
+                    </div>
+                 </div>
+                 
+               
+            </div>
+        </div>
+        
+       <div class="p_item ">
+           <div class="p_cards tg-clear-child">
+               
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(12).do" alt="">
+                    <div class="p_card_name">困难生</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=71d3a4bdcca7775490">进入应用</div>
+                    </div>
+                 </div>
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(13).do" alt="">
+                    <div class="p_card_name">勤工助学</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=2db5ea358869c6">进入应用</div>
+                    </div>
+                 </div>
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(14).do" alt="">
+                    <div class="p_card_name">助学金</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=6ac4bceff19513ac14875">进入应用</div>
+                    </div>
+                 </div>
+                 
+               
+            </div>
+        </div>
+        
+       <div class="p_item ">
+           <div class="p_cards tg-clear-child">
+               
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(15).do" alt="">
+                    <div class="p_card_name">奖学金</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=9cb0f3c061e3b0f5af6d31">进入应用</div>
+                    </div>
+                 </div>
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(16).do" alt="">
+                    <div class="p_card_name">违纪处分</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=48c276d37a72fc1093da">进入应用</div>
+                    </div>
+                 </div>
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(17).do" alt="">
+                    <div class="p_card_name">综合测评产品</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=6f94050228a6f1c5a">进入应用</div>
+                    </div>
+                 </div>
+                 
+               
+            </div>
+        </div>
+        
+       <div class="p_item ">
+           <div class="p_cards tg-clear-child">
+               
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(18).do" alt="">
+                    <div class="p_card_name">心理咨询</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=5e905885dd6b61b">进入应用</div>
+                    </div>
+                 </div>
+                 
+               
+            </div>
+        </div>
+        
+       <div class="p_item ">
+           <div class="p_cards tg-clear-child">
+               
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(19).do" alt="">
+                    <div class="p_card_name">辅导员考核</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=c1adba9196017ee1b9">进入应用</div>
+                    </div>
+                 </div>
+                 
+               
+            </div>
+        </div>
+        
+       <div class="p_item ">
+           <div class="p_cards tg-clear-child">
+               
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(20).do" alt="">
+                    <div class="p_card_name">宿舍申办</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=c9dd64ebd7f544">进入应用</div>
+                    </div>
+                 </div>
+                 
+               
+            </div>
+        </div>
+        
+       <div class="p_item ">
+           <div class="p_cards tg-clear-child">
+               
+                 
+                 <div class="p_card">
+                    <img src="./one_files/appIcon(21).do" alt="">
+                    <div class="p_card_name">学生离校</div>
+                    <div class="p_card_hover">
+                        <div class="p_card_hover_enter" data-url="/xsfw/sys/emaphome/appShow.do?id=09a8c034d4a7a0d0">进入应用</div>
+                    </div>
+                 </div>
+                 
+               
+            </div>
+        </div>
+        
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+    <section class="s_right_container">
+        
+        <div class="p-notice" data-mod="widgets/msg_list">
+            
+
+
+
+<div class="p-notice-title" data-url="/xsfw/sys/emaphome/portal/more_msg.do" data-target="_self">
+    <img src="./one_files/notice.png" alt="" class="img-notice-icon">
+    <label class="p-notice-name">消息通知</label>
+    <img src="./one_files/arrow.png" class="p-notice-more" alt="">
+</div>
+
+
+  
+    <ul>
+      
+      <li title="[学生请假]您的请假申请审核已通过。"><a href="javascript:;" data-url="/sys/xsqjapp/*default/index.do#/wdqj">[学生请假]您的请假申请审核已通过。</a> </li>
+      
+      <li title="[学生请假]您的请假申请审核已通过。"><a href="javascript:;" data-url="/sys/xsqjapp/*default/index.do#/wdqj">[学生请假]您的请假申请审核已通过。</a> </li>
+      
+      <li title="[学生请假]您的请假申请审核已通过。"><a href="javascript:;" data-url="/sys/xsqjapp/*default/index.do#/wdqj">[学生请假]您的请假申请审核已通过。</a> </li>
+      
+      <li title="[节假日离返校]您的节假日申请审核已通过。"><a href="javascript:;" data-url="/sys/jjrlfxapp/*default/index.do#/register">[节假日离返校]您的节假日申请审核已通过。</a> </li>
+      
+      <li title="[节假日离返校]您的节假日申请审核已通过。"><a href="javascript:;" data-url="/sys/jjrlfxapp/*default/index.do#/register">[节假日离返校]您的节假日申请审核已通过。</a> </li>
+      
+    </ul>
+  
+  
+
+
+        </div>
+        
+        <div class="p_between_border"></div>
+        
+        <div class="p-announce" data-mod="widgets/notice_list">
+            
+
+
+
+<div class="p-notice-title" data-url="/xsfw/sys/emaphome/portal/more_notice.do" data-target="_self">
+    <img src="./one_files/announce.png" alt="" class="img-notice-icon">
+    <label class="p-notice-name">通知公告</label>
+    <img src="./one_files/arrow.png" class="p-notice-more" alt="">
+</div>
+
+
+  
+  
+    <div class="msg-nodata-container">
+        <div class="nodata-text">暂无任何公告</div>
+    </div>
+  
+
+
+       </div>
+       
+    </section>
+</article>
+
+
+    </main>
+
+
+
+</body><style id="igor_ext_nofollow">a[rel~='nofollow'],a[rel~='sponsored'],a[rel~='ugc']{outline:.14em dotted red !important;outline-offset:.2em;}a[rel~='nofollow'] img,a[rel~='sponsored'] img,a[rel~='ugc'] img{outline:2px dotted red !important;outline-offset:.2em;}</style></html>
